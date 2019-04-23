@@ -19,7 +19,7 @@ def renameCSV():
     allCSVFiles.sort()
 
     for filename in allCSVFiles: 
-        new_filename = "csvs/" + robos[i] + ".csv"
+        new_filename = "csvs/" + robos_sl[i] + ".csv"
         # rename() function will rename all the files 
         os.rename(filename, new_filename)
         i += 1
@@ -31,33 +31,10 @@ def renameCSV():
     #     dst = os.path.join('csvs/'+ new_filename)
 
 def main():
-    print(len(robos))
+    print(len(robos_sl))
     renameCSV()
+    print (len([name for name in os.listdir("csvs/") if os.path.isfile(name)]))
+
 
 if __name__ == "__main__":
     main()
-
-
-######################################## Scratch
-# open and store the csv file
-# IDs = {}
-# with open('.csv','rb') as csvfile:
-#     timeReader = csv.reader(csvfile, delimiter = ',')
-    
-#     # build dictionary with associated IDs
-#     for row in timeReader:
-#         IDs[row[0]] = row[1]
-#         os.rename(src, dst)
-# path = 'txt_orig'
-# tmp_path = 'txt_tmp'
-
-# with open('..csv','rb') as csvfile:
-#     reader = csv.reader(csvfile, delimiter = ',')
-#     for row in reader:
-#        oldname = os.path.join(path, row[0])
-#        if os.path.exists(oldname):
-#            newname = os.path.join(tmp_path, row[1])
-#            os.rename(oldname, newname)
-#            print >> os.stderr, "renamed '%s' to '%s'" % (oldname, newname)
-#        else:
-#            print >> os.stderr, "file '%s' not found" % oldname

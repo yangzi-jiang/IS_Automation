@@ -39,10 +39,13 @@ def csvDownload():
     backtest.click()
     
     # Pick the robo list to run
-    for roboAdvisor in robos:
+    for roboAdvisor in robos_sl:
         if(roboAdvisor == "SustainFolio P10" or roboAdvisor == "SustainFolio P5"):
-            browser.find_element_by_id("timePeriod_chosen").click()
-            browser.find_element_by_link_text("Month-to-Month").click()
+            pass
+            # browser.find_element_by_id("timePeriod_chosen").click()
+            # browser.implicitly_wait(1)
+            # browser.find_element_by_partial_link_text("Month-to-Month").click() # There is a new bug
+            # browser.implicitly_wait(1)
 
         browser.find_element_by_id("allocationOptionsButton1").click()
         roboPortfolio = browser.find_element_by_partial_link_text(roboAdvisor)
@@ -51,10 +54,11 @@ def csvDownload():
         browser.find_element_by_link_text("Excel").click()
 
         if(roboAdvisor == "SustainFolio P10" or roboAdvisor == "SustainFolio P5"):
-            browser.find_element_by_id("timePeriod_chosen").click()
-            browser.find_element_by_link_text("Year-to-Year").click()
-
-        # TODO: Try renaming csv after each download
+            pass
+            # browser.find_element_by_id("timePeriod_chosen").click()
+            # browser.implicitly_wait(1)
+            # browser.find_element_by_partial_link_text("Year-to-Year").click()
+            # browser.implicitly_wait(1)
 
     # Logout
     browser.find_element_by_link_text("Davidson").click()
