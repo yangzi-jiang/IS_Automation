@@ -319,3 +319,5 @@ bail@chrome://marionette/content/sync.js:196:64
 1556012352939	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
 bail@chrome://marionette/content/sync.js:196:64
 1556015439515	Marionette	INFO	Stopped listening on port 65229
+[Parent 47076, Gecko_IOThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 718
+1556028286336	Marionette	INFO	Stopped listening on port 64411
