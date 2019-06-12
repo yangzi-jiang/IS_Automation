@@ -12,6 +12,8 @@ robos = ["Betterment 72-28", "Betterment 90-10", "BrightPlan 60-40", "BrightPlan
 robos_sl = ["Betterment 90-10", "Fidelity 90-10", "Schwab 90-10", "SigFig 90-10", "Vanguard 90-10", "Wealthfront 90-10", "TIAA 90-10", "M-1 90-10", "TAP 90-10", "TAP 60-40",
             "Betterment 72-28", "Fidelity Portfolio", "FutureAdvisors Portfolio", "Schwab Portfolio", "SigFig 60-40", "Vanguard Portfolio", "Wealthfront Portfolio", "TIAA 60-40", "M-1 60-40", "BrightPlan 60-40"]
 
+robos_90_10 = ["Betterment 90-10", "Fidelity 90-10", "Schwab 90-10", "SigFig 90-10", "Vanguard 90-10", "Wealthfront 90-10", "TIAA 90-10", "M-1 90-10", "TAP 90-10"]
+
 def renameCSV():
     i = 0
 
@@ -19,7 +21,9 @@ def renameCSV():
     allCSVFiles.sort()
 
     for filename in allCSVFiles: 
-        new_filename = "csvs/" + robos_sl[i] + ".csv"
+        # new_filename = "csvs/" + robos_sl[i] + ".csv"
+        new_filename = "csvs/" + robos_90_10[i] + ".csv"
+
         # rename() function will rename all the files 
         os.rename(filename, new_filename)
         i += 1
